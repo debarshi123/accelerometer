@@ -1,8 +1,24 @@
 input.onButtonPressed(Button.A, function () {
-    basic.showNumber(input.magneticForce(Dimension.Strength))
+    basic.showString("The temperature is" + input.temperature() + "degrees centigrade")
+})
+input.onButtonPressed(Button.B, function () {
+    music.playMelody("A F E F D G E F ", 251)
 })
 basic.forever(function () {
-    if (input.magneticForce(Dimension.Strength) < 200) {
-        basic.showIcon(IconNames.StickFigure)
+    basic.showArrow(ArrowNames.South)
+    basic.pause(5000)
+    basic.clearScreen()
+})
+basic.forever(function () {
+    if (input.lightLevel() > 100) {
+        basic.showLeds(`
+            # . # . #
+            . # # # .
+            # # # # #
+            . # # # .
+            # . # . #
+            `)
+    } else {
+        basic.clearScreen()
     }
 })

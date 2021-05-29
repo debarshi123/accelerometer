@@ -1,5 +1,5 @@
 {
-    "name": "Magnetic force",
+    "name": "Basic operations",
     "description": "",
     "dependencies": {
         "core": "*",
